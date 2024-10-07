@@ -7,7 +7,7 @@ const isDevelopment = process.env.NODE_ENV != 'production';
 module.exports = {
     mode: isDevelopment ? 'development' : 'production',
     devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-    entry: path.resolve(__dirname, 'src', 'index.tsx'),
+    entry: path.resolve(__dirname, 'src', 'index.jsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -40,9 +40,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: ['style-loader','css-loader', 'sass-loader']
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: ['file-loader'],
+            },
+            // {
+            //     test: /\.scss$/,
+            //     exclude: /node_modules/,
+            //     use: ['style-loader','css-loader', 'sass-loader']
+            // },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
             }
         ]
     }

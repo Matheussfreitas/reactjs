@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Public Sans";
+    color: #4F4F4F;
+    background-color: #6f6f6f;
+}
+
+ul.list li {
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+ul.list li:hover {
+    background-color: #DCDCDC;
+    border-radius: 8px;
+}
+
+ul.list li:active {
+    background-color: #778899;
+    border-radius: 8px;
+    color: #04AA6D;
+}
+
+ul.list li ul.sublist li {
+    padding: 3px;
+    margin-buttom: 10px;
+    font-size: 16px;
+}
+
+.list a span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icon {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon span {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.barra {
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 8px;
+    display: flex;
+    justify-content: end;
+    max-width: 1280px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.barra nav img {
+    padding: 8px;
+    border-radius: 50px;
+    background-color: #66CDAA;
+}
+
+.balao {
+    max-width: 1000px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.balao-content {
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
