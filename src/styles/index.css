@@ -13,31 +13,33 @@ body {
     margin: 0;
     font-family: "Public Sans";
     color: #4F4F4F;
-    background-color: #6f6f6f;
+    background-color: #E0E0E0;
 }
 
-ul.list li {
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list li {
     border-radius: 8px;
     padding: 8px;
     margin: 5px;
-    font-size: 16px;
+    position: relative; 
 }
 
-ul.list li:hover {
-    background-color: #DCDCDC;
-    border-radius: 8px;
+.list li:hover {
+    background-color: #E0E0E0;
 }
 
-ul.list li:active {
+.list li:active {
     background-color: #778899;
-    border-radius: 8px;
     color: #04AA6D;
 }
 
-ul.list li ul.sublist li {
-    padding: 3px;
-    margin-buttom: 10px;
-    font-size: 16px;
+.sublist {
+    overflow: hidden; /* Para ocultar o submenu quando max-height é 0 */
+    transition: max-height 0.3s ease; /* Para uma transição suave */
 }
 
 .list a span {
@@ -46,7 +48,13 @@ ul.list li ul.sublist li {
     gap: 10px;
 }
 
+/* Estilo adicional para hover em subitens, se necessário */
+.sublist li:hover {
+    background-color: #E0E0E0; /* Estilo para hover no submenu */
+}
+
 .icon {
+    margin-top: 20px;
     padding: 8px;
     display: flex;
     justify-content: center;
@@ -60,13 +68,12 @@ ul.list li ul.sublist li {
 
 .barra {
     padding: 15px;
-    border: 1px solid;
     border-radius: 8px;
     display: flex;
     justify-content: end;
-    max-width: 1280px;
     width: 100%;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .barra nav img {
@@ -76,9 +83,8 @@ ul.list li ul.sublist li {
 }
 
 .balao {
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 20px;
-    border: 1px solid;
     border-radius: 8px;
     background-color: #fff;
     display: flex;
@@ -87,9 +93,55 @@ ul.list li ul.sublist li {
 }
 
 .balao-content {
-    max-width: 510px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+.container-form {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.table {
+    width: 1200px;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.table tr {
+    border: 1px solid;
+    padding: 5px;
+}
+
+.table td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+.box-table {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

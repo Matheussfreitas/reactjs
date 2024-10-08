@@ -1,6 +1,6 @@
 export function Pagina(props) {
     return (
-        <div className="w-screen">
+        <div className="w-full">
             <main>{props.children}</main>
         </div>
     )

@@ -1,7 +1,18 @@
-import { Home } from './components/Home'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import { Disparador } from './pages/Disparador'
+import { Home } from './pages/Home'
+import { Instancias } from './pages/Instancias'
 
 export function App() {
     return (
-        <Home /> 
+        <HashRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/disparador" element={<Disparador />} />
+                <Route path="/instancias" element={<Instancias />} />
+            </Routes>
+        </HashRouter>
+        
+        // <Disparador />
     )
 }

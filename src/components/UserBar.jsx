@@ -1,6 +1,6 @@
 import user from '../assets/user.png'
 
-export function Barra() {
+export function UserBar() {
     return (
         <div className='barra'>
             <nav>

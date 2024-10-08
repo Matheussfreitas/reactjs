@@ -1,13 +1,13 @@
-import { Balao } from "./Balao";
-import { Barra } from "./Barra";
-import { Pagina } from "./templates/Pagina";
+import { Balao } from "../Balao";
+import { UserBar } from "../UserBar";
+import { Pagina } from "./Pagina";
 
-export function Conteudo() {
+export function ConteudoHome() {
     return (
         <div className="mx-32 my-5">
             <Pagina>
                 <div className="flex flex-col gap-7">
-                    <Barra />
+                    <UserBar />
                     <Balao />
                 </div>
             </Pagina> 
