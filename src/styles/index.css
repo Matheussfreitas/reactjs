@@ -13,7 +13,7 @@ body {
     margin: 0;
     font-family: "Public Sans";
     color: #4F4F4F;
-    background-color: #E0E0E0;
+    background-color: rgba(76, 175, 80, 0.1);
 }
 
 .list {
@@ -33,24 +33,14 @@ body {
 }
 
 .list li:active {
-    background-color: #778899;
+    background-color: #E0E0E0;
     color: #04AA6D;
-}
-
-.sublist {
-    overflow: hidden; /* Para ocultar o submenu quando max-height é 0 */
-    transition: max-height 0.3s ease; /* Para uma transição suave */
 }
 
 .list a span {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-/* Estilo adicional para hover em subitens, se necessário */
-.sublist li:hover {
-    background-color: #E0E0E0; /* Estilo para hover no submenu */
 }
 
 .icon {
@@ -63,7 +53,12 @@ body {
 .icon span {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 8px;
+}
+
+.icon span img {
+    width: 31px;
+    height: 30px;
 }
 
 .barra {
@@ -86,10 +81,10 @@ body {
     max-width: 1200px;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: #fff;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-itens: space-beetwen;
 }
 
 .balao-content {
