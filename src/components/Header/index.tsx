@@ -1,11 +1,16 @@
 import { Container, Content } from './styles'
+import logo from '/Users/Bolt/reactjs/src/assets/Logo.svg'
 
-export function Header() {
+interface HeaderProps {
+    onOpenNewTransactionModal: () => void;
+}
+
+export function Header({ onOpenNewTransactionModal }: HeaderProps) {
     return (
         <Container>
             <Content>
-                <img src="" alt="" />
-                <button type='button'>
+                <img src={logo} alt="" />
+                <button type='button' onClick={onOpenNewTransactionModal}>
                     Nova transação
                 </button>
             </Content>
