@@ -6,11 +6,13 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     font-size: 600;
-
-
+    
+    
     table {
         width: 100%;
         color: var(--text-body);
+        border-spacing: 0;
+        border-collapse: separate;
     }
 
     table tr th {
@@ -26,16 +28,11 @@ export const Container = styled.div`
         color: var(--text-title);
     }
 
-    table .valor {
-        color: var(--green);
-    }
-
     table tr {
         background: var(--shape);
     }
 
     table tr td {
         padding: 1rem;
-        border-radius: 5px;
     }
 `
