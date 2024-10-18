@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { TransactionsContext } from "../../TransactionsContext";
 import { Container } from "./styles";
 import entradas from '/Users/Bolt/reactjs/src/assets/Entradas.svg'
 import saidas from '/Users/Bolt/reactjs/src/assets/Saídas.svg'
 import total from '/Users/Bolt/reactjs/src/assets/Total.svg'
 
 export function Summary() {
+    const {transactions} = useContext(TransactionsContext);
+    
     return (
         <Container>
             <div>
